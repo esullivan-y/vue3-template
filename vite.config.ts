@@ -1,4 +1,4 @@
-import { ConfigEnv, defineConfig, UserConfig } from "vite";
+import { ConfigEnv, defineConfig, UserConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
 
@@ -9,10 +9,13 @@ import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 
+// svg icon整合
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
+
 const pathSrc: string = path.resolve(__dirname, "src");
 
 // https://vitejs.dev/config/
-export default ({ mode }: ConfigEnv): UserConfig => {
+export default ({ command, mode }: ConfigEnv): UserConfig => {
   return {
     // 路径别名
     resolve: {
@@ -63,6 +66,12 @@ export default ({ mode }: ConfigEnv): UserConfig => {
       Icons({
         // 自动安装图标库
         autoInstall: true,
+      }),
+      createSvgIconsPlugin({
+        // 指定需要缓存的图标文件夹
+        iconDirs: [path.resolve(process.cwd(), "src/assets/icons")],
+        // 指定symbolId格式
+        symbolId: "icon-[dir]-[name]",
       }),
     ],
   };
