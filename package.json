@@ -13,6 +13,7 @@
     "vue": "^3.4.31"
   },
   "devDependencies": {
+    "@iconify-json/ep": "^1.1.15",
     "@types/node": "^20.14.12",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
