@@ -21,7 +21,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // add
+    "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
+    "paths": {
+      //路径映射，相对于baseUrl
+      "@/*": ["src/*"]
+    },
+    "allowSyntheticDefaultImports": true // 允许默认导入
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
