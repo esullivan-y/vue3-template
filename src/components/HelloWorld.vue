@@ -4,6 +4,10 @@ import { ref } from "vue";
 defineProps<{ msg: string }>();
 
 const count = ref(0);
+
+// aa();
+// a.aa();
+api.a.aa();
 </script>
 
 <template>
@@ -15,10 +19,6 @@ const count = ref(0);
 
   <div class="card">
     <el-button type="button" @click="count++">count is {{ count }}</el-button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
   </div>
 </template>
 

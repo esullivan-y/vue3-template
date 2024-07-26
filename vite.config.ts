@@ -45,6 +45,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           enabled: true, // 是否自动生成 eslint 规则，建议生成之后设置 false
           filepath: "./.eslintrc-auto-import.json", // 指定自动导入函数 eslint 规则的文件
         },
+        dirs: ["src/api"],
         dts: false,
         // 指定自动导入函数TS类型声明文件路径
         // dts: path.resolve(pathSrc, "types", "auto-imports.d.ts"),
