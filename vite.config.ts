@@ -63,10 +63,13 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         // 是否在 vue 模板中自动导入
         vueTemplate: true,
         // 自动导入 Vue 相关函数，如：ref, reactive, toRef 等
-        imports: ["vue"],
+        imports: ["vue", "pinia"],
         eslintrc: {
-          enabled: true, // 是否自动生成 eslint 规则，建议生成之后设置 false
-          filepath: "./.eslintrc-auto-import.json", // 指定自动导入函数 eslint 规则的文件
+          // 是否自动生成 eslint 规则，建议生成之后设置 false
+          enabled: false,
+          // 指定自动导入函数 eslint 规则的文件
+          filepath: "./.eslintrc-auto-import.json",
+          globalsPropValue: true,
         },
         dirs: ["src/api"],
         dts: false,
