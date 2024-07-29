@@ -16,6 +16,8 @@ const pathSrc: string = path.resolve(__dirname, "src");
 
 // https://vitejs.dev/config/
 export default ({ command, mode }: ConfigEnv): UserConfig => {
+  const env = loadEnv(mode, process.cwd());
+
   return {
     // 路径别名
     resolve: {
@@ -25,8 +27,19 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
     },
     server: {
       host: "0.0.0.0",
-      port: 3000,
+      port: Number(env.VITE_APP_PORT),
       open: true,
+      // 本地开发反向代理解决本地接口跨域问题
+      proxy: {
+        /** 代理前缀为 /dev-api 的请求  */
+        [env.VITE_APP_BASE_API]: {
+          changeOrigin: true,
+          // 接口地址
+          target: env.VITE_APP_API_URL,
+          rewrite: (path) =>
+            path.replace(new RegExp("^" + env.VITE_APP_BASE_API), ""),
+        },
+      },
     },
     css: {
       // CSS 预处理器

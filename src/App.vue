@@ -6,8 +6,10 @@ const counterStore = useCounterStore();
 </script>
 
 <template>
-  <el-button type="primary" @click="counterStore.increment">count++</el-button>
-  <HelloWorld msg="Vue3 template" />
+  <HelloWorld msg="" />
+  <el-button type="primary" @click="counterStore.increment"
+    >parent component pinia count++</el-button
+  >
 </template>
 
 <style scoped>
