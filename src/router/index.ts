@@ -20,6 +20,9 @@ export const constantRoutes: RouteRecordRaw[] = [
     path: "/",
     name: "/",
     component: () => import("@/views/dashboard/index.vue"),
+    redirect: {
+      name: "Dashboard",
+    },
     children: [
       {
         path: "dashboard",
