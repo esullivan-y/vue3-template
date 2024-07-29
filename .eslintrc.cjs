@@ -17,5 +17,8 @@ module.exports = {
     parser: "@typescript-eslint/parser",
   },
   plugins: ["vue", "@typescript-eslint"],
-  rules: {},
+  rules: {
+    //关闭组件命名规则
+    "vue/multi-word-component-names": "off",
+  },
 };
