@@ -28,6 +28,16 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       port: 3000,
       open: true,
     },
+    css: {
+      // CSS 预处理器
+      preprocessorOptions: {
+        //define global scss variable
+        scss: {
+          javascriptEnabled: true,
+          additionalData: `@use "@/styles/variables.scss" as *;`,
+        },
+      },
+    },
     plugins: [
       vue(),
       AutoImport({
