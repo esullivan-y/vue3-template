@@ -22,9 +22,7 @@ api.a.aa();
   <el-button type="danger"><i-ep-WarnTriangleFilled />Danger</el-button>
 
   <div class="card">
-    <el-button class="read-the-docs" type="button" @click="count++"
-      >count is {{ count }}</el-button
-    >
+    <el-button class="read-the-docs" type="button" @click="count++">count is {{ count }}</el-button>
   </div>
 
   <el-form>

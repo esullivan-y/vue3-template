@@ -7,9 +7,7 @@ const counterStore = useCounterStore();
 
 <template>
   <HelloWorld msg="" />
-  <el-button type="primary" @click="counterStore.increment"
-    >parent component pinia count++</el-button
-  >
+  <el-button type="primary" @click="counterStore.increment">parent component pinia count++</el-button>
 </template>
 
 <style scoped>
