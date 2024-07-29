@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import HelloWorld from "./components/HelloWorld.vue";
+
+import { useCounterStore } from "@/store/modules/counter";
+const counterStore = useCounterStore();
 </script>
 
 <template>
-  <div></div>
+  <el-button type="primary" @click="counterStore.increment">count++</el-button>
   <HelloWorld msg="Vue3 template" />
 </template>
 

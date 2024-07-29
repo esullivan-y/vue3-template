@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import variables from "@/styles/variables.module.scss";
 console.log(variables.bgColor);
-import { ref } from "vue";
+
+import { useCounterStore } from "@/store/modules/counter";
+const counterStore = useCounterStore();
 
 defineProps<{ msg: string }>();
 
@@ -24,6 +26,11 @@ api.a.aa();
       >count is {{ count }}</el-button
     >
   </div>
+
+  <el-form>
+    <el-form-item label="数字："> {{ counterStore.count }}</el-form-item>
+    <el-form-item label="加倍："> {{ counterStore.double }}</el-form-item>
+  </el-form>
 </template>
 
 <style lang="scss" scoped>
