@@ -36,8 +36,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           changeOrigin: true,
           // 接口地址
           target: env.VITE_APP_API_URL,
-          rewrite: (path) =>
-            path.replace(new RegExp("^" + env.VITE_APP_BASE_API), ""),
+          rewrite: (path) => path.replace(new RegExp("^" + env.VITE_APP_BASE_API), ""),
         },
       },
     },
