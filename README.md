@@ -3,6 +3,8 @@ vue3、typescript、vite、pinia、vue-router、element-plus
 
 基础vue3框架、auto-import、auto-import-component、整合element-plus、svg图标支持、添加pinia、添加vue-router
 
+node18、pnpm、fnm
+
 > ESLint+Prettier+Stylelint+EditorConfig 约束和统一前端代码规范
 
 Eslint： JavaScript 语法规则和代码风格检查；
