@@ -16,3 +16,4 @@ Prettier：全局代码格式化。
 Husky + Lint-staged 整合实现 Git 提交前代码规范检测/格式化；
 Husky + Commitlint + Commitizen + cz-git 整合实现生成规范化且高度自定义的 Git commit message。
 
+TODO：自动生成CHANGELOG.MD文件
