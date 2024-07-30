@@ -12,3 +12,4 @@ insert_final_newline = true # 始终在文件末尾插入一个新行
 [*.md]
 max_line_length = off # 关闭最大行长度限制
 trim_trailing_whitespace = false # 关闭末尾空格修剪
+ 
