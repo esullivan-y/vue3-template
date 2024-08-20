@@ -17,8 +17,13 @@ module.exports = {
     parser: "@typescript-eslint/parser",
   },
   plugins: ["vue", "@typescript-eslint"],
+  globals: {
+    NodeJS: "readonly",
+  },
   rules: {
     //关闭组件命名规则
     "vue/multi-word-component-names": "off",
+    "vue/comment-directive": "off",
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
 };
